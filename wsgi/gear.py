@@ -89,7 +89,7 @@ class Gear(object):
     def index(self, *args, **kwargs):
         # 進行資料庫檔案連結,  並且取出所有資料
         try:
-            # 利用 Store  建立資料庫檔案對應物件, 並且設定 frozen=True 表示不要開放動態資料表的建立
+            # 利用 Store  建 立資料庫檔案對應物件, 並且設定 frozen=True 表示不要開放動態資料表的建立
             # 因為程式以 application 所在目錄執行, 因此利用相對目錄連結 lewis.db 資料庫檔案
             SQLite連結 = Store(SQLiteWriter(_curdir+"/lewis.db", frozen=True))
             #material = SQLite連結.find_one("steel","serialno = ?",[序號])
